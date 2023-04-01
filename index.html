@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZUdzPMhrBOmmR3RiwSb1cz4zD3Qn-hD3jsZGb_jQNg&s"width="25px" height="15px">
+                    <h2>Qis college of Engineering &Technology<span></span></h2>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#"><span class="material-icons-sharp">grid_view</span>
+                <h3>Overview</h3>
+                </a>
+                <a href="#"><span class="material-icons-sharp">person_outline</span>
+                    <h3>Acadamic register</h3>
+                </a>
+                <a href="#"><span class="material-icons-sharp">replay</span>
+                    <h3>Backlogs</h3>
+                </a>
+                <a href="#"><span class="material-icons-sharp">change_circle</span>
+                    <h3>Change mobile No,E-Mail</h3>
+                </a>
+                <a href="#"><span class="material-icons-sharp">mail_outline</span>
+                    <h3>Circulars</h3>
+                </a>
+                <a href="#"><span class="material-icons-sharp">inventory</span>
+                    <h3>Marks</h3>
+                </a>
+                <a href="#"><span class="material-icons-sharp">schedule</span>
+                    <h3>Time table</h3>
+                </a>
+                <a href="#"><span class="material-icons-sharp">emoji_transportation</span>
+                    <h3>Vehical Register</h3>
+                </a>
+                <a href="#"><span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+<!---------------------progress--------------------------------->
+        <div class="main-1">
+            <div class="about">
+                <img src="OIP.jfif">
+                <h3>Yakkala Prudhvi Raj</h3>
+            </div>
+               <h1 class="hello">Hello ,That's your week stats</h1>
+               <div class="flex-1">
+               <div class="con-2">
+               <div class="circular-progress">
+                   <div class="value-container">
+                      <span>50%</span>
+                   </div>
+               </div>
+               <div class="par-1">
+                <h3>Attendance Progress</h3>
+                <h5>Attendance should Above +75%</h5>
+               </div>
+           </div>
+           <div class="con-2">
+            <div class="circular-progress">
+                <div class="value-container">
+                   <span>0%</span>
+                </div>
+            </div>
+            <div class="par-1">
+             <h3>Percentage</h3>
+             <h5>Grade-A</h5>
+            </div>
+        </div>
+    
+        <div class="con-2">
+            <div class="circular-progress">
+                <div class="value-container">
+                   <span>0%</span>
+                </div>
+            </div>
+            <div class="par-1">
+             <h3>Attendance Progress</h3>
+             <h5>Attendance should Above +75%</h5>
+            </div>
+        </div>
+    </div>
+       
+</div>
+   <script>
+      //----------------------script progress---------------------------------------
+      let progressbar = document.querySelector(".circular-progress");
+      let valuecontainer = document.querySelector(".value-container");
+
+      let progressvalue = 0;
+      let progressendvalue =80;
+      let progress = setInterval (() => {
+      progressvalue++;
+      valuecontainer.textContent = `${progressvalue}%`;
+      progressbar.style.background = `conic-gradient(
+           #92b7c0 ${progressvalue * 3.9}deg,
+            #c6d8e2 ${progressvalue * 3.6}deg
+           )`;
+      if (progressvalue == progressendvalue) {
+        clearInterval(progress);
+      }
+      }, 20);
+
+
+      
+      //----------------------script progress---------------------------------------
+    </script>
+</body>
+</html>

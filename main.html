@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" re="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 2250px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(98, 97, 100);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <div class="topnav">
+        <a class="active" href="main.html">Home</a>
+        <a href="#news">ABOUT US</a>
+        <!--<a href="#contact">ACADEMICS</a>-->
+        <div class="dropdown">
+          <button class="dropbtn">ACADEMICS 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">ACEDEMIC COUNICL</a>
+            <a href="#">ACADEMIC CALANDERS</a>
+            <a href="#">ACADEMIC REGULATIONS</a>
+            <a href="#">COURSES OFFERED</a>
+            <a href="#">ACADEMIC ADMINISTRATIONS</a>
+            <a href="#">NEWS LETTERS</a>
+            <a href="#">BOS</a>
+            
+
+          </div>
+        </div> 
+        <!--<a href="#about">FACILITIES</a>-->
+        <div class="dropdown">
+          <button class="dropbtn">FACILITIES 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">BANK ATM</a>
+            <a href="#">CAFATERIA</a>
+            <a href="#">PHYSICAL EDUCATION</a>
+            <a href="#">HOSTELS FOR BOTH BOYS & GIRLS</a>
+            <a href="#">TRANSPORT</a>
+            <a href="#">MEDICAL FACILITY</a>
+            <a href="#">FOOD COURT</a>
+            <a href="#">SPORTS & GAMES</a>
+            <a href="#">BOOK STORE</a>
+
+          </div>
+        </div> 
+        <!--<a href="#about">DEPARTMENTS</a>-->
+        <div class="dropdown">
+          <button class="dropbtn">DEPARTMENTS 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">COMPUTER SCIENCE & ENGINEERING</a>
+            <a href="#">COMPUTER SCIENCE & ENGINEERING(Data Science)</a>
+            <a href="#">COMPUTER SCIENCE & ENGINEERING AND BUSINESS SYSTEM</a>
+            <a href="#">COMPUTER SCIENCE AND INFORMATION TECHNOLOGY</a>
+            <a href="#">ARTIFICIAL INTELLIGENCE</a>
+            <a href="#">INFORMATION TECHNOLOGY</a>
+            <a href="#">ARTIFICIAL INTELLIGENCE</a>
+            <a href="#">MECHANICAL ENGINEERING</a>
+            <a href="#">CIVIL ENGINEERING</a>
+            <a href="#">ELECTRONICS & COMMUNICATION ENGINEERING</a>
+            <a href="#">ELECTRONICS &ELECTRICAL ENGINEERING</a>
+            <a href="#">MASTERS OF COMPUTER APPLICATIONS</a>
+            <a href="#">MASTERS OF BUSINESS ADMINISTRATION</a>
+            <a href="#">BASIC SCIENCE AND HUMANITY</a>
+            <a href="#"></a>
+            <a href="#"></a>
+          </div>
+        </div> 
+        <a href="#about">CENTRAL LIBRARY</a>
+        <!--<a href="#about">CAREERS</a>-->
+        <div class="dropdown">
+          <button class="dropbtn">CAREERS
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">HR Directors</a>
+            <a href="#">Careers</a>
+            <a href="#">Admin Manual</a>
+            <a href="#">Staf Welfare Measures</a>
+            <a href="#">Downloads</a>
+          </div>
+        </div> 
+
+        <a href="#about">R&D</a>
+        <!--<a href="#about">TRAINING AND PLACEMENTS</a>-->
+        <div class="dropdown">
+          <button class="dropbtn">TRAINING & PLACEMENTS
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">CORPORATE RELATIONS</a>
+            <a href="#">PLACEMENTS INOFRMATION</a>
+            <a href="#">RECRUITERS</a>
+            <a href="#">TRAINIG</a>
+            <a href="#">STUDENT SPEAK</a>  
+          </div>
+        </div> 
+        <!--<a href="#about">EDC CELL</a>-->
+        <div class="dropdown">
+          <button class="dropbtn">EDC CELL
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">ABOUT EDC CELL</a>
+            <a href="#">INNOVATION & STARTUP POLICY</a>
+            <a href="#">ENTREPRENEURS LIST</a>
+            <a href="#">EDC EVENTS</a>
+            <a href="#">TOP 10 ENTREPRENEURS</a>
+            <a href="#">START-UP RESOURCES</a>
+            <a href="#">IDEATHON 1.0</a>
+            
+          </div>
+        </div> 
+        <a href="#about">ACCREDITATION</a>
+        <a href="#about">RANKING &CERIFICATIONS</a>
+        <!--<a href="#about">EXAMINATION</a>-->
+        <div class="dropdown">
+          <button class="dropbtn">EXAMINATION
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">CE</a>
+            <a href="#">ACES</a>
+            <a href="#">MANUALS</a>
+            <a href="#">ANNUAL REPORT</a>
+            <a href="#">NOTIFICATIONS</a>
+            <a href="#">TIME TABLES</a>
+            <a href="#">ACADEMIC TOPPERS</a>
+            <a href="#">STUDENT RESULTS</a>
+            <a href="#">OLD QUESTION PAPERS</a>
+            <a href="#">APPLICATION FORMS</a>
+            <a href="#"></a>
+          </div>
+        </div> 
+        <a href="#about">STUDENT VERIFICATION</a>
+        <a href="profilelogin.html">STUDENT LOGIN</a>
+        <a href="facultylogin.html">FACULTY LOGIN</a>
+        <a href="#about">CAMPUS TOUR</a>
+        <a href="#about">CONTACT US</a>
+        <a href="#about">HELP</a>
+        <a href="#about">CAMPUS TOUR</a>
+
+    </div>
+    <img src="https://qiscet.edu.in/qiscet/images/qiscetlogo.jpg">
+    <!--<marquee direction="right" bgcolor="lightgrey" scroll-delay="0"><font size="20px"><h1>QIS COLLEGE OF ENGINEERING AND TECHNOLOGY (Autonomous) <br></h1>
+        <h3>Vengamukkapalem,&nbsp;Ongole-&nbsp;523&nbsp;272,&nbsp;Prakasam District<br></h3>
+        <h3>Ph:08592-281023</h3></font></marquee>
+    <h1 align="center">QIS COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+    <h4 align="center">(Autonomous)</h4>
+    <p align="center">Approved by AICTE,Permanently Affiliated to J.N.T.U,Kakinada</p>
+    <p align="center">Accredited byNBA, UGC Recognised,An ISO 9001-2008 Certified Institution</p>
+    <p align="center">Vangamukkapalem , Ongole</p>-->
+    
+
+
+   
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="https://qiscet.edu.in/qiscet/images/s7.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="https://qiscet.edu.in/qiscet/images/s5.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="https://qiscet.edu.in/qiscet/images/s3.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="https://qiscet.edu.in/qiscet/images/BANNER.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>  
+        
+</body>
+</html>
